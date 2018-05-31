@@ -1,5 +1,5 @@
 # TeleGraph
-Powerful Python utility used to gather statistics of users in Telegram chats and to output this data in easy to read graphs.
+Powerful Python utility used to gather statistics and track trends of users in Telegram chats and to output this data in easy to read graphs.
 
 ### Dependencies
 [Python 3.6.5](https://www.python.org/downloads/release/python-365/)
