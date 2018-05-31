@@ -52,10 +52,11 @@ def configureGraph():
 
 
 
-"""
-Create a histogram showing the total messages sent for each user and save to the output pdf 
-"""
+
 def graphTotalMessages():
+    """
+    Create a histogram showing the total messages sent for each user and save to the output pdf 
+    """
     currentFigure = plt.figure()
     totalMessageGraph = plt.subplot()
     barGraph = plt.bar(userList, totalMessagesPerUser, color = globalColors)
@@ -71,10 +72,10 @@ def graphTotalMessages():
 
     pdf.savefig(currentFigure)
 
-"""
-Create a histogram showing the average response time for each user and save to the output pdf 
-"""
 def graphAverageResponeTime():
+    """
+    Create a histogram showing the average response time for each user and save to the output pdf 
+    """
     currentFigure = plt.figure()
     averageResponseTimeGraph = plt.subplot()
     barGraph = plt.bar(userList, responseTimePerUser, color = globalColors)
@@ -90,10 +91,11 @@ def graphAverageResponeTime():
 
     pdf.savefig(currentFigure)
 
-"""
-Create a line graph of every user's average messages sent per month and save to output pdf 
-"""
+
 def graphAverageMessagesPerMonth():
+    """
+    Create a line graph of every user's average messages sent per month and save to output pdf 
+    """
     currentFigure = plt.figure()
     averageMessagesPerMonth = plt.subplot()
     
@@ -120,10 +122,11 @@ def graphAverageMessagesPerMonth():
 
     pdf.savefig(currentFigure)
 
-"""
-Generate a new figure for each word and plot a line graph for each user's usage of said word over a year 
-"""
+
 def trackWordUsageGroup():
+    """
+    Generate a new figure for each word and plot a line graph for each user's usage of said word over a year 
+    """
     for word in checkWordCount:
         currentFigure = plt.figure()
         trackedWordGraph = plt.subplot()
