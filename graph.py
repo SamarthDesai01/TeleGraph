@@ -60,10 +60,6 @@ def configureGraph():
         plt.rcParams['ytick.labelsize'] = 15
         plt.rcParams['axes.labelsize'] = 'x-large'
 
-
-
-
-
 def graphTotalMessages():
     """
     Create a histogram showing the total messages sent for each user and save to the output pdf 

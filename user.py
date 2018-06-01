@@ -249,7 +249,6 @@ class UserData(object):
             avgMessage = weekAct[weekday][0]/weekAct[weekday][1]
             print("    " + self.weekdays[weekday] + ": " + str(avgMessage))
     
-
     def printHourInfo(self):
         """
         Print the average number of messages sent each hour 
