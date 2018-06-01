@@ -201,6 +201,12 @@ class UserData(object):
         Return dictionary with words specified by user to be checked, each word has its own ActivityInfo object 
         """
         return self.wordDict
+    
+    def getPeerID(self):
+        """
+        Return current user's unique id
+        """
+        return self.id
 
     def printInfo(self):
         """

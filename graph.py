@@ -21,10 +21,21 @@ pdf = matplotlib.backends.backend_pdf.PdfPages("output.pdf")
 #Gather totalMessages and AverageResponseTime for all users and trim names if they're too long 
 for user in userDict:
     currentUserName = userDict[user].getFullName()
-    if len(currentUserName) >= 26:
+    currentUserId = userDict[user].getPeerID()
+    currentMessages = userDict[user].getNumMessages()
+    if len(currentUserName) >= 26: #Ensure that long names will still fit on the graph
         currentUserName = currentUserName[:-5] + "..."
+
+    #Code used to check if the same user (determined by name) occurs twice in the data, due to phone number change 
+    for secondUser in userDict: #Loop through the users again to check if any of them have the same print name
+        secondUserName = userDict[secondUser].getFullName()
+        secondUserId = userDict[secondUser].getPeerID()
+        secondUserMessages = userDict[secondUser].getNumMessages()
+        if currentUserName == secondUserName and currentUserId != secondUserId: #If they have the same print name but different IDs combine total messages
+            currentMessages+= userDict[secondUser].getNumMessages()
+
     userList.append(currentUserName)
-    totalMessagesPerUser.append(userDict[user].getNumMessages())    
+    totalMessagesPerUser.append(currentMessages)    
     responseTimePerUser.append(userDict[user].getAverageResponseTime())
 
 def graphData():
