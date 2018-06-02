@@ -134,9 +134,9 @@ class UserData(object):
         """
         for sender in mostRecentMessage:
             #Data is read in backwards, going from most recent to latest, thus the "recentMessage" will have a greater time stamp than our current message
-            responseTime = mostRecentMessage[sender] - messageData['date']
+            responseTime =  messageData['date'] - mostRecentMessage[sender]
             #Check if the time between messages is greater than 5 hours, if so both people are probably asleep so ignore this for responseTime
-            if not(responseTime >= 36000):
+            if responseTime < 36000:
                 self.totalResponseTime+=responseTime
                 self.numResponses+=1
 

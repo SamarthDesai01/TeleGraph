@@ -14,7 +14,7 @@ firstRunFlag = 1
 totalMessageCount = 0
 mostRecentMessage = {0:0}
 
-for currentLine in file.readlines(): #Loop through every message in our specified file
+for currentLine in reversed(file.readlines()): #Loop through every message in our specified file, file is in reverse order, so read it reversed
     #Load the entire JSON object into a python dictionary 
     messageData = json.loads(currentLine)
 
