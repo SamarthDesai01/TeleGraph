@@ -76,6 +76,74 @@ on a graph in `output.pdf` you can see these other statistics easily inside `ful
 TeleGraph also keeps track of the total messages you've sent and keeps an individual count for the number of pictures, files, and webpages each user has sent.
 All of these statistics are shown inside of `output.pdf` and `fullStats.txt`
 
+### Sample Output 
+----
+
+This is what data for a single user in `fullStats.txt` would look like
+
+```
+-------------------Samarth Desai-------------------
+    Peer ID: 162996295
+    Messages Sent: 77939
+    Pictures Sent: 2708
+    Files Sent: 774
+    Links Sent: 209
+    Average Message Length (Words): 9
+    Average Characters Per Message: 42
+    Average Response Time(Minutes): 2.2038821496119483
+    awesome : 27 //Occurrences for the word "awesome" - See output.pdf for a visual representation of its usage over time
+    good morning : 9 
+    whats up : 3
+Messages Sent per Month: 
+2017
+    6: 3834
+    7: 6800
+    8: 8600
+    9: 8496
+    10: 6535
+    11: 6223
+    12: 6476
+2018
+    1: 8184
+    2: 7292
+    3: 7518
+    4: 5180
+    5: 2801
+Average Messages Sent per Week
+    Sunday: 247.57142857142858
+    Monday: 249.41666666666666
+    Tuesday: 245.60416666666666
+    Wednesday: 228.72916666666666
+    Thursday: 194.33333333333334
+    Friday: 208.57142857142858
+    Saturday: 235.10204081632654
+Average Messages sent for each hour: 
+    0: 6.326530612244898
+    1: 2.323615160349854
+    2: 0.8046647230320699
+    3: 0.2303206997084548
+    4: 0.09329446064139942
+    5: 0.008746355685131196
+    6: 0.014577259475218658
+    7: 0.9212827988338192
+    8: 2.110787172011662
+    9: 8.32069970845481
+    10: 8.323615160349854
+    11: 13.034985422740524
+    12: 11.56268221574344
+    13: 13.28862973760933
+    14: 14.25072886297376
+    15: 15.982507288629737
+    16: 15.720116618075801
+    17: 16.481049562682216
+    18: 14.568513119533527
+    19: 14.201166180758017
+    20: 16.932944606413994
+    21: 17.985422740524783
+    22: 19.548104956268222
+    23: 14.192419825072886
+```
+
 
 
 
