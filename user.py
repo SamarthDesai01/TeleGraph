@@ -189,6 +189,12 @@ class UserData(object):
         Refer to getAveragedMonthActivity() in dateinfo.py
         """
         return self.activity.getAveragedMonthActivity()
+    
+    def getAveragedHourActivity(self):
+        """
+        Refer to getAveragedHourActivity() in dateinfo.py
+        """
+        return self.activity.getAveragedHourActivity()
 
     def getAverageResponseTime(self):
         """
