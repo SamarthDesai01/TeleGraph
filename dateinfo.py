@@ -127,7 +127,7 @@ class ActivityInfo(object):
         Return an array with the average number of messages sent for a particular hour for a day. Returned array will be of length 24 with 
         each index referring to the particular hour the average corresponds to
         """
-        averagedHourActivity = []
+        averagedHourActivity = [0] * 24
         weekAct = self.weekdayActivity
         firstAvailableWeekDay = 0
 
@@ -139,6 +139,6 @@ class ActivityInfo(object):
         hourAct = self.hourActivity
         for hour in sorted(hourAct.keys()): 
             avgMessage = hourAct[hour][0]/numDays
-            averagedHourActivity.append(avgMessage)
+            averagedHourActivity[hour] = avgMessage
         
         return averagedHourActivity

@@ -43,6 +43,7 @@ def graphData():
         configureGraph()
         graphTotalMessages()
         graphAverageResponeTime()
+        graphAverageMessagesPerHour()
         graphAverageMessagesPerMonth()
         trackWordUsageGroup()
 
@@ -129,6 +130,36 @@ def graphAverageMessagesPerMonth():
 
     pdf.savefig(currentFigure)
 
+def graphAverageMessagesPerHour():
+    """
+    Create a line graph of every user's average messages sent per hour
+    """
+
+    currentFigure = plt.figure()
+    averageMessagesPerHour = plt.subplot()
+
+    for user in userDict:
+        userName = userDict[user].getFirstName()
+        userHourActivity = userDict[user].getAveragedHourActivity()
+        currentPlot = averageMessagesPerHour.plot(list(range(0,24)),userHourActivity, label = userName)
+
+    if totalUsers <= bigGraphThreshold:
+        labelLines(plt.gca().get_lines())
+        averageMessagesPerHour.set_title("Average Messages Sent per Hour of Day")
+        averageMessagesPerHour.set_xticks(np.arange(24))
+        averageMessagesPerHour.set_xticklabels(range(0,24))
+    else:
+        averageMessagesPerHour.legend()
+        averageMessagesPerHour.set_title("Average Messages Sent per Hour of Day", size = 20)
+        averageMessagesPerHour.set_xticks(np.arange(24))
+        averageMessagesPerHour.set_xticklabels(list(range(0,24)), fontsize = 18)
+    
+    averageMessagesPerHour.set_ylabel("Messages Sent")
+    averageMessagesPerHour.set_xlabel("Hour of Day")
+
+    currentFigure.autofmt_xdate()
+
+    pdf.savefig(currentFigure)
 
 def trackWordUsageGroup():
     """
