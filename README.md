@@ -144,7 +144,10 @@ Average Messages sent for each hour:
     23: 14.192419825072886
 ```
 
+Below are sample graphs outputted by TeleGraph. Names have been blacked out for privacy. 
 
-
+<a href="https://ibb.co/dKuSgU"><img src="https://image.ibb.co/cmKtMU/avgHours.png" alt="avgHours" border="0"></a>
+<a href="https://ibb.co/mtJL1U"><img src="https://image.ibb.co/kV9SgU/avg_Messages.png" alt="avg_Messages" border="0"></a>
+<a href="https://ibb.co/kQq01U"><img src="https://image.ibb.co/g2UGap/user_Track.png" alt="user_Track" border="0"></a>
 
 
