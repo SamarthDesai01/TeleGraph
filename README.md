@@ -109,7 +109,7 @@ Messages Sent per Month:
     3: 7518
     4: 5180
     5: 2801
-Average Messages Sent per Week
+Average Messages Sent per Weekday:
     Sunday: 247.57142857142858
     Monday: 249.41666666666666
     Tuesday: 245.60416666666666

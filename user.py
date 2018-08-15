@@ -249,7 +249,7 @@ class UserData(object):
         """
         Print the average number of messsages sent each weekday 
         """
-        print("Average Messages Sent per Weekday")
+        print("Average Messages Sent per Weekday:")
         weekAct = self.activity.getWeekdayActivity()
         for weekday in sorted(weekAct.keys()):
             avgMessage = weekAct[weekday][0]/weekAct[weekday][1]
